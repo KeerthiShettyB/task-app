@@ -1,0 +1,30 @@
+
+<div class="edit-task-container">
+  <h2>Edit Task</h2>
+  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="edit-task-form-field">
+      <mat-label>Title:</mat-label>
+      <input matInput type="text" formControlName="title" required>
+    </mat-form-field>
+
+    <mat-form-field class="edit-task-form-field">
+      <mat-label>Description:</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="edit-task-form-field">
+      <mat-label>Due Date:</mat-label>
+      <input matInput type="text" formControlName="dueDate" placeholder="YYYY-MM-DD" required>
+    </mat-form-field>
+
+    <mat-form-field class="edit-task-form-field">
+      <mat-label>Status:</mat-label>
+      <mat-select formControlName="status" required>
+        <mat-option value="incomplete">Incomplete</mat-option>
+        <mat-option value="complete">Complete</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary">Update Task</button>
+  </form>
+</div>

@@ -1,0 +1,16 @@
+
+.create-task-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .create-task-form mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .create-task-form button {
+    align-self: flex-start;
+  }

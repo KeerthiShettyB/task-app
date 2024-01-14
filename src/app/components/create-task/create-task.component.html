@@ -1,0 +1,31 @@
+<form class="create-task-form" (ngSubmit)="onSubmit()" [formGroup]="taskForm">
+
+  <mat-form-field class="form-group">
+    <mat-label>Title</mat-label>
+    <input matInput type="text" id="title" formControlName="title" required>
+    <mat-error *ngIf="taskForm.get('title')?.hasError('required')">Title is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="form-group">
+    <mat-label>Description</mat-label>
+    <textarea matInput id="description" formControlName="description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="form-group">
+    <mat-label>Due Date</mat-label>
+    <input matInput type="date" id="dueDate" formControlName="dueDate" required>
+    <mat-error *ngIf="taskForm.get('dueDate')?.hasError('required')">Due Date is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="form-group">
+    <mat-label>Status</mat-label>
+    <mat-select formControlName="status" id="status">
+      <mat-option value="incomplete">Incomplete</mat-option>
+      <mat-option value="complete">Complete</mat-option>
+    </mat-select>
+    <mat-error *ngIf="taskForm.get('status')?.hasError('required')">Status is required</mat-error>
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color="primary">Create Task</button>
+
+</form>

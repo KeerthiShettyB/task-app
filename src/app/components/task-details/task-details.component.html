@@ -1,0 +1,8 @@
+
+<div *ngIf="task" class="task-details">
+  <h1 class="details-title">{{ task.title }}</h1>
+  <p class="details-description">{{ task.description }}</p>
+  <p class="details-due-date">Due Date: {{ task.dueDate | date:'mediumDate' }}</p>
+  <p class="details-status">Status: <span [class]="getStatusClass(task.status)">{{ task.status }}</span></p>
+  <button mat-button (click)="goBack()" class="back-button">Back</button>
+</div>

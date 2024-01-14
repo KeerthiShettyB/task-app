@@ -1,0 +1,24 @@
+
+.edit-task-container {
+  margin: 20px;
+}
+
+.edit-task-container form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+.edit-task-container label {
+  margin-bottom: 8px;
+}
+
+.edit-task-container mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.edit-task-container button {
+  align-self: flex-start;
+}
